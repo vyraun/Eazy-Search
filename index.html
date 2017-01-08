@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--Built on code at https://github.com/vikasraunak/Avenger-Search --> 
+  <style>
+table, th, td {
+    border: 0px solid black;
+}
+
+element {
+    -webkit-filter: invert();
+}
+
+</style>
+
+<style type="text/css">
+       a:link {color: black;}     
+       a:visited {color: black;}   
+       a:hover {color: black;}     
+       a:active {color: black;}    
+    </style>
+  
+  
+  <title>Eazy Search</title>
+    <script type="text/javascript">
+      var images = new Array();
+      for (var i = 0; i < 16; i++) {
+        images.push(i + ".png");
+      }
+      var x = 0;
+      function changeImage() {
+        document.getElementById('ad').src = images[x];
+        if (x < 16) {
+          x += 1;
+        } else {
+          x = 0;
+        }
+      }
+      window.onload = function() {
+        setInterval(function () {
+          changeImage();
+        }, 5000000);
+      }
+    </script>
+  <!-- Include JQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+
+  <meta name="description" content="search">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" href="logo.png">
+  <style>.button,.input{box-sizing:border-box}.button,.button:visited{color:#444}.button,.buttons,.disclaimer,.logo{text-align:center}html{font-family:arial,sans-serif}.wrapper{margin:0 auto;max-width:500px}h1{font-weight:400}.input{font:16px arial,sans-serif;width:100%;padding:6px 9px;background-color:#fff;border:1px solid #d9d9d9;border-top-color:silver;height:28px;line-height:28px;vertical-align:top;outline:0}.input:focus{border-color:#000000}.button{display:inline-block;background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-color:#f5f5f5;background-image:linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);-webkit-border-radius:2px;-webkit-user-select:none;border:1px solid #dcdcdc;border:1px solid rgba(0,0,0,.1);border-radius:2px;cursor:default;font-size:11px;font-weight:700;margin:11px 8px;min-width:54px;padding:0 8px;height:29px;line-height:27px;outline:0;text-decoration:none}.button:hover{background-image:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);-webkit-box-shadow:0 1px 1px rgba(0,0,0,.1);background-color:#f8f8f8;background-image:linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-o-linear-gradient(top,#f8f8f8,#f1f1f1);border:1px solid #c6c6c6;box-shadow:0 1px 1px rgba(0,0,0,.1);color:#222}.button:focus{border:1px solid #444444;outline:0}.logo{margin:200px auto 25px}@media screen and (max-width:480px){.logo{margin:10px auto 25px}}.logo img{height:105px;width:auto}.disclaimer{font-size:6px;text-transform:uppercase;position:absolute;bottom:5px;left:0;right:0;color:#ccc}.z{color:#156AEC}.l{color:#D33F2A}.a1{color:#FFBA02}.t{color:#156AEC}.a2{color:#009956}.n{color:#D33F2A}</style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<body>
+    <div class="wrapper">
+      <div class="logo">
+          <img id="ad" src="0.png" alt="Search" onerror="this.onerror=null;this.src='/logo/logo@2x.png'">
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <form action="https://www.google.com.com" method="get">
+        <input class="input" type="text" name="q" id="field" autofocus>
+        <div class="buttons">
+          <input type="submit" class="button" id="x1" name="x1" value="Google">
+          <input type="submit" class="button" id="x2" name="x2" value="Bing">
+          <input type="submit" class="button" id="x5" name="x5" value="News">
+          <input type="submit" class="button" id="x6" name="x6" value="YouTube">
+          <input type="submit" class="button" id="x3" name="x3" value="Stack">
+          <input type="submit" class="button" id="x4" name="x4" value="Reddit">         
+        </div>
+      </form>
+    </div>
+
+   <script>
+$(".button").on("click", function(e){
+e.preventDefault();
+var x = $(this).attr("value");
+var redirect = "" 
+if (x=="Google")
+{
+  window.location = "https://google.com/search?q=" + $(".input").val();
+//window.open("https://google.com/search?q=" + $(".input").val(), '_blank'); 
+}
+if (x=="Bing")
+{
+ window.location = "https://www.bing.com/search?q=" + $(".input").val();
+}
+if (x=="News")
+{
+ window.location = "https://news.google.com/news?q=" + $(".input").val();
+}
+if (x=="YouTube")
+{
+ window.location = "https://www.youtube.com/results?search_query=" + $(".input").val();
+}
+if (x=="Lynda")
+{
+ window.location = "https://www.reddit.com/search?q=" + $(".input").val();
+}
+if (x=="Stack")
+{
+ window.location = "http://stackoverflow.com/search?q=" + $(".input").val();
+}
+});
+</script>
+
+<!--  https://duckduckgo.com/?q=  https://twitter.com/search?q= -->
+
+<br>
+<br>
+<br>
+<table align="center">
+
+  <tr>
+    <td>
+	<p style = 'line-height: 24px' text-align: 'center';>
+
+<a href="#" target="_blank"><i style="font-size:24px" class="fa" title="Book a Cab">&#xf1b9;</i></a>
+</p>
+	</td>
+    
+	<td>
+	<p style = 'line-height: 24px'>
+
+<a href="https://www.americanexpress.com/in/" target="_blank"><i style="font-size:24px" class="fa" title="Manage Expenses">&#xf1f3;</i></a>
+</p>
+	</td>
+    
+	<td>
+	<p style = 'line-height: 24px'>
+
+<a href="https://www.cnet.com/" target="_blank"><i style="font-size:24px" class="fa" title="Visit CNET">&#xf282;</i></a>
+</p>
+	</td>
+
+    <td>
+	<p style = 'line-height: 24px'>
+
+<a href="http://gmail.com/" target="_blank"><i class="fa fa-envelope" style="font-size:24px" title="Access GMail"></i></a>
+</p>
+	</td>
+    
+	<td  align="center">
+	<p style = 'line-height: 24px'>
+
+<a href="https://techcrunch.com/" target="_blank"><i style="font-size:24px" class="fa" title="Visit TechCrunch">&#xf09e;</i></a>
+</p>
+	</td>
+    
+	<td>
+	<p style = 'line-height: 24px'>
+
+<a href="https://www.facebook.com/" target="_blank"><i style="font-size:24px" class="fa" title="Facebook Profile">&#xf2c2;</i></a>
+</p>
+	</td>
+
+    <td>
+	<p style = 'line-height: 24px'>
+
+<a href="https://www.goodreads.com/" target="_blank"><i style="font-size:24px" class="fa" title="Visit GoodReads">&#xf212;</i></a>
+</p>
+	</td>
+    <td  align="center">
+	<p style = 'line-height: 24px'>
+
+<a href="https://ms.portal.azure.com" target="_blank"><i style="font-size:24px" class="fa" title="Do Something">&#xf200;</i></a>
+</p>
+	</td>
+    <td>
+	<p style = 'line-height: 24px'>
+
+<a href="https://twitter.com/" target="_blank"><i style="font-size:24px" class="fa" title="Twitter">&#xf0a1;</i></a>
+</p>
+	</td>
+  </tr>
+  
+
+  </table>
+
+</body>
+</html>
